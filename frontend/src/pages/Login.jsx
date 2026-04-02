@@ -74,7 +74,7 @@
 //         otp,
 //       });
 //       if (response.data.success) {
-//         toast.success("Registration successful! Please login now.");
+//         toast.success("Registration succes-. sful! Please login now.");
 //         setCurrentState("Login");
 //         setName("");
 //         setPassword("");

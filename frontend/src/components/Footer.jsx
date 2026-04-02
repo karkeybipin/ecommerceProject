@@ -20,7 +20,6 @@
 
 // export default Footer;
 
-import React from 'react';
 import { assets } from '../assets/assets';
 
 const Footer = () => {
@@ -45,19 +44,18 @@ const Footer = () => {
         <div>
             <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
             <ul className='flex flex-col gap-1 text-gray-600'>
-                <li>+977-9869499054</li>
-                <li>karkeybipin@email.com</li>
+                <li>+44 7771 671561</li>
+                <li>Prasunthapa44@email.com</li>
             </ul>
         </div>
 
       </div>
       <div>
         <hr className='border-gray-300' />
-        <p className='py-5 text-sm text-center'>Copyright 2025@ yungflame.com - All Rights Reserved </p>
+        <p className='py-5 text-sm text-center'>Copyright 2025@ Prasun Thapa - yungflame - All Rights Reserved </p>
       </div>
 
     </div>
   );
 };
-
 export default Footer;

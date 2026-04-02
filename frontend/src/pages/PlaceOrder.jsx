@@ -6,48 +6,48 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 // Nepal Provinces and Districts Data
-const nepalData = {
-  "Province 1 (Koshi Province)": [
-    "Bhojpur", "Dhankuta", "Ilam", "Jhapa", "Khotang", "Morang", 
-    "Okhaldhunga", "Panchthar", "Sankhuwasabha", "Solukhumbu", 
-    "Sunsari", "Taplejung", "Terhathum", "Udayapur"
-  ],
-  "Province 2 (Madhesh Province)": [
-    "Bara", "Dhanusha", "Mahottari", "Parsa", "Rautahat", 
-    "Saptari", "Sarlahi", "Siraha"
-  ],
-  "Province 3 (Bagmati Province)": [
-    "Bhaktapur", "Chitwan", "Dhading", "Dolakha", "Kathmandu", 
-    "Kavrepalanchok", "Lalitpur", "Makwanpur", "Nuwakot", 
-    "Rasuwa", "Ramechhap", "Sindhuli", "Sindhupalchok"
-  ],
-  "Province 4 (Gandaki Province)": [
-    "Baglung", "Gorkha", "Kaski", "Lamjung", "Manang", 
-    "Mustang", "Myagdi", "Nawalpur", "Parbat", "Syangja", "Tanahun"
-  ],
-  "Province 5 (Lumbini Province)": [
-    "Arghakhanchi", "Banke", "Bardiya", "Dang", "Gulmi", 
-    "Kapilvastu", "Palpa", "Parasi", "Pyuthan", "Rolpa", 
-    "Rukum East", "Rupandehi"
-  ],
-  "Province 6 (Karnali Province)": [
-    "Dailekh", "Dolpa", "Humla", "Jajarkot", "Jumla", 
-    "Kalikot", "Mugu", "Rukum West", "Salyan", "Surkhet"
-  ],
-  "Province 7 (Sudurpashchim Province)": [
-    "Achham", "Baitadi", "Bajhang", "Bajura", "Dadeldhura", 
-    "Darchula", "Doti", "Kailali", "Kanchanpur"
-  ]
-};
+// const nepalData = {
+//   "Province 1 (Koshi Province)": [
+//     "Bhojpur", "Dhankuta", "Ilam", "Jhapa", "Khotang", "Morang", 
+//     "Okhaldhunga", "Panchthar", "Sankhuwasabha", "Solukhumbu", 
+//     "Sunsari", "Taplejung", "Terhathum", "Udayapur"
+//   ],
+//   "Province 2 (Madhesh Province)": [
+//     "Bara", "Dhanusha", "Mahottari", "Parsa", "Rautahat", 
+//     "Saptari", "Sarlahi", "Siraha"
+//   ],
+//   "Province 3 (Bagmati Province)": [
+//     "Bhaktapur", "Chitwan", "Dhading", "Dolakha", "Kathmandu", 
+//     "Kavrepalanchok", "Lalitpur", "Makwanpur", "Nuwakot", 
+//     "Rasuwa", "Ramechhap", "Sindhuli", "Sindhupalchok"
+//   ],
+//   "Province 4 (Gandaki Province)": [
+//     "Baglung", "Gorkha", "Kaski", "Lamjung", "Manang", 
+//     "Mustang", "Myagdi", "Nawalpur", "Parbat", "Syangja", "Tanahun"
+//   ],
+//   "Province 5 (Lumbini Province)": [
+//     "Arghakhanchi", "Banke", "Bardiya", "Dang", "Gulmi", 
+//     "Kapilvastu", "Palpa", "Parasi", "Pyuthan", "Rolpa", 
+//     "Rukum East", "Rupandehi"
+//   ],
+//   "Province 6 (Karnali Province)": [
+//     "Dailekh", "Dolpa", "Humla", "Jajarkot", "Jumla", 
+//     "Kalikot", "Mugu", "Rukum West", "Salyan", "Surkhet"
+//   ],
+//   "Province 7 (Sudurpashchim Province)": [
+//     "Achham", "Baitadi", "Bajhang", "Bajura", "Dadeldhura", 
+//     "Darchula", "Doti", "Kailali", "Kanchanpur"
+//   ]
+// };
 
 // Get all districts for when no province is selected
-const getAllDistricts = () => {
-  const allDistricts = [];
-  Object.values(nepalData).forEach(districts => {
-    allDistricts.push(...districts);
-  });
-  return allDistricts.sort();
-};
+// const getAllDistricts = () => {
+//   const allDistricts = [];
+//   Object.values(nepalData).forEach(districts => {
+//     allDistricts.push(...districts);
+//   });
+//   return allDistricts.sort();
+// };
 
 const PlaceOrder = () => {
   const [method, setMethod] = useState("cod");
@@ -66,8 +66,8 @@ const PlaceOrder = () => {
     lastName: "",
     email: "",
     street: "",
-    city: "",
-    state: "",
+    // city: "",
+    // state: "",
     zipcode: "",
     country: "",
     phone: "",
@@ -86,12 +86,12 @@ const PlaceOrder = () => {
   };
 
   // Get available districts based on selected province
-  const getAvailableDistricts = () => {
-    if (formData.state && nepalData[formData.state]) {
-      return nepalData[formData.state];
-    }
-    return getAllDistricts(); // Show all districts if no province selected
-  };
+  // const getAvailableDistricts = () => {
+  //   if (formData.state && nepalData[formData.state]) {
+  //     return nepalData[formData.state];
+  //   }
+  //   return getAllDistricts(); // Show all districts if no province selected
+  // };
 
 const onSubmitHandler = async (event) => {
   event.preventDefault();
@@ -258,7 +258,7 @@ const onSubmitHandler = async (event) => {
                 </div>
 
                 {/* State and City - Swapped positions */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="group">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Province
@@ -299,22 +299,22 @@ const onSubmitHandler = async (event) => {
                       ))}
                     </select>
                   </div>
-                </div>
+                </div> */}
 
-                {/* Zipcode and Country */}
+                {/* Post code and Country */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="group">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Zip Code
+                      Post Code
                     </label>
                     <input
                       required
                       onChange={onChangeHandler}
                       name="zipcode"
-                      value={formData.zipcode}
+                      value={formData.postcode}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 placeholder-gray-400 hover:border-gray-400"
                       type="number"
-                      placeholder="Enter zip code"
+                      placeholder="Enter Post code"
                     />
                   </div>
                   <div className="group">

@@ -4,39 +4,39 @@ import { toast } from "react-toastify";
 import { backendUrl, currency } from "../App";
 
 // Nepal Provinces and Districts Data
-const nepalData = {
-  "Province 1 (Koshi Province)": [
-    "Bhojpur", "Dhankuta", "Ilam", "Jhapa", "Khotang", "Morang", 
-    "Okhaldhunga", "Panchthar", "Sankhuwasabha", "Solukhumbu", 
-    "Sunsari", "Taplejung", "Terhathum", "Udayapur"
-  ],
-  "Province 2 (Madhesh Province)": [
-    "Bara", "Dhanusha", "Mahottari", "Parsa", "Rautahat", 
-    "Saptari", "Sarlahi", "Siraha"
-  ],
-  "Province 3 (Bagmati Province)": [
-    "Bhaktapur", "Chitwan", "Dhading", "Dolakha", "Kathmandu", 
-    "Kavrepalanchok", "Lalitpur", "Makwanpur", "Nuwakot", 
-    "Rasuwa", "Ramechhap", "Sindhuli", "Sindhupalchok"
-  ],
-  "Province 4 (Gandaki Province)": [
-    "Baglung", "Gorkha", "Kaski", "Lamjung", "Manang", 
-    "Mustang", "Myagdi", "Nawalpur", "Parbat", "Syangja", "Tanahun"
-  ],
-  "Province 5 (Lumbini Province)": [
-    "Arghakhanchi", "Banke", "Bardiya", "Dang", "Gulmi", 
-    "Kapilvastu", "Palpa", "Parasi", "Pyuthan", "Rolpa", 
-    "Rukum East", "Rupandehi"
-  ],
-  "Province 6 (Karnali Province)": [
-    "Dailekh", "Dolpa", "Humla", "Jajarkot", "Jumla", 
-    "Kalikot", "Mugu", "Rukum West", "Salyan", "Surkhet"
-  ],
-  "Province 7 (Sudurpashchim Province)": [
-    "Achham", "Baitadi", "Bajhang", "Bajura", "Dadeldhura", 
-    "Darchula", "Doti", "Kailali", "Kanchanpur"
-  ]
-};
+// const nepalData = {
+//   "Province 1 (Koshi Province)": [
+//     "Bhojpur", "Dhankuta", "Ilam", "Jhapa", "Khotang", "Morang", 
+//     "Okhaldhunga", "Panchthar", "Sankhuwasabha", "Solukhumbu", 
+//     "Sunsari", "Taplejung", "Terhathum", "Udayapur"
+//   ],
+//   "Province 2 (Madhesh Province)": [
+//     "Bara", "Dhanusha", "Mahottari", "Parsa", "Rautahat", 
+//     "Saptari", "Sarlahi", "Siraha"
+//   ],
+//   "Province 3 (Bagmati Province)": [
+//     "Bhaktapur", "Chitwan", "Dhading", "Dolakha", "Kathmandu", 
+//     "Kavrepalanchok", "Lalitpur", "Makwanpur", "Nuwakot", 
+//     "Rasuwa", "Ramechhap", "Sindhuli", "Sindhupalchok"
+//   ],
+//   "Province 4 (Gandaki Province)": [
+//     "Baglung", "Gorkha", "Kaski", "Lamjung", "Manang", 
+//     "Mustang", "Myagdi", "Nawalpur", "Parbat", "Syangja", "Tanahun"
+//   ],
+//   "Province 5 (Lumbini Province)": [
+//     "Arghakhanchi", "Banke", "Bardiya", "Dang", "Gulmi", 
+//     "Kapilvastu", "Palpa", "Parasi", "Pyuthan", "Rolpa", 
+//     "Rukum East", "Rupandehi"
+//   ],
+//   "Province 6 (Karnali Province)": [
+//     "Dailekh", "Dolpa", "Humla", "Jajarkot", "Jumla", 
+//     "Kalikot", "Mugu", "Rukum West", "Salyan", "Surkhet"
+//   ],
+//   "Province 7 (Sudurpashchim Province)": [
+//     "Achham", "Baitadi", "Bajhang", "Bajura", "Dadeldhura", 
+//     "Darchula", "Doti", "Kailali", "Kanchanpur"
+//   ]
+// };
 
 // Get all districts for when no province is selected
 const getAllDistricts = () => {
@@ -285,7 +285,7 @@ const AddOrderManually = ({ token }) => {
                 </div>
 
                 {/* State and City */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="group">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Province
@@ -328,13 +328,13 @@ const AddOrderManually = ({ token }) => {
                       ))}
                     </select>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Zipcode and Country */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="group">
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Zip Code
+                      Post Code
                     </label>
                     <input
                       required
