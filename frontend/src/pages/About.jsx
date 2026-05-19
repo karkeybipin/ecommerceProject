@@ -29,7 +29,7 @@
 //       >
 //         <Title text1={'ABOUT'} text2={'US'} />
 //         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-//           Ignite your style with Yung Flame — where bold fashion meets fearless individuality.
+//           Ignite your style with Karking Fashion — where bold fashion meets fearless individuality.
 //         </p>
 //       </motion.div>
 
@@ -46,7 +46,7 @@
 //             <img
 //               className="w-full rounded-xl shadow-lg transform group-hover:scale-105 transition-transform duration-500"
 //               src={assets.about_img}
-//               alt="Yung Flame"
+//               alt="Karking Fashion"
 //             />
 //             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"></div>
 //           </div>
@@ -54,9 +54,9 @@
 
 //         {/* Text Content */}
 //         <motion.div className="w-full md:w-1/2 flex flex-col gap-6 text-gray-600" variants={fadeIn}>
-//           <h2 className="text-2xl font-bold text-gray-900">Welcome to Yung Flame</h2>
+//           <h2 className="text-2xl font-bold text-gray-900">Welcome to Karking Fashion</h2>
 //           <p className="text-base leading-relaxed">
-//             Yung Flame isn’t just a brand—it’s a movement for the bold, creative, and authentic. We believe fashion is self-expression, and our streetwear, accessories, and lifestyle essentials are designed to fuel your unique vibe. Stand out in a world that asks you to blend in.
+//             Karking Fashion isn’t just a brand—it’s a movement for the bold, creative, and authentic. We believe fashion is self-expression, and our streetwear, accessories, and lifestyle essentials are designed to fuel your unique vibe. Stand out in a world that asks you to blend in.
 //           </p>
 //           <p className="text-base leading-relaxed">
 //             Born from culture, driven by passion. We fuse raw street style with premium quality and innovation. Every drop is bold, limited, and crafted to spark attention. Join the Flame community and ignite your style journey.
@@ -84,7 +84,7 @@
 //             {
 //               title: 'Quality Assurance',
 //               description:
-//                 'From fabric to finish, every Yung Flame product undergoes strict quality checks. We use premium materials and trusted partners to deliver durable, comfortable, and stylish pieces.',
+//                 'From fabric to finish, every Karking Fashion product undergoes strict quality checks. We use premium materials and trusted partners to deliver durable, comfortable, and stylish pieces.',
 //             },
 //             {
 //               title: 'Convenience',
@@ -145,7 +145,10 @@ const About = () => {
       >
         <Title text1={'ABOUT'} text2={'US'} />
         <p className="mt-5 text-lg text-gray-700 max-w-3xl mx-auto font-light tracking-wide">
-          Ignite your style with Yung Flame — where bold fashion meets fearless individuality.
+          Ignite your style with Karking Fashion
+        </p>
+        <p>
+          where bold fashion meets fearless individuality.
         </p>
       </motion.div>
 
@@ -162,7 +165,7 @@ const About = () => {
             <img
               className="w-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
               src={assets.hero_imgg}
-              alt="Yung Flame Hero"
+              alt="Karking Fashion Hero"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-700 rounded-xl"></div>
           </div>
@@ -170,9 +173,9 @@ const About = () => {
 
         {/* Text Content */}
         <motion.div className="w-full md:w-1/2 flex flex-col gap-8 text-gray-700" variants={fadeIn}>
-          <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Welcome to Yung Flame</h2>
+          <h2 className="text-3xl font-extrabold text-gray-900 tracking-tight">Welcome to Karking Fashion</h2>
           <p className="text-lg leading-relaxed font-light">
-            Yung Flame isn’t just a brand—it’s a movement for the bold, creative, and authentic. We believe fashion is self-expression, and our streetwear, accessories, and lifestyle essentials are designed to fuel your unique vibe. Stand out in a world that asks you to blend in.
+            Karking Fashion isn’t just a brand—it’s a movement for the bold, creative, and authentic. We believe fashion is self-expression, and our streetwear, accessories, and lifestyle essentials are designed to fuel your unique vibe. Stand out in a world that asks you to blend in.
           </p>
           <p className="text-lg leading-relaxed font-light">
             Born from culture, driven by passion. We fuse raw street style with premium quality and innovation. Every drop is bold, limited, and crafted to spark attention. Join the Flame community and ignite your style journey.
@@ -194,7 +197,7 @@ const About = () => {
         <motion.div className="text-center mb-16" variants={fadeIn}>
           <Title text1={'WHY'} text2={'CHOOSE US'} />
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto font-light tracking-wide">
-            Discover what sets Yung Flame apart and why our community trusts us.
+            Discover what sets Karking Fashion apart and why our community trusts us.
           </p>
         </motion.div>
 
@@ -203,7 +206,7 @@ const About = () => {
             {
               title: 'Quality Assurance',
               description:
-                'From fabric to finish, every Yung Flame product undergoes strict quality checks. We use premium materials and trusted partners to deliver durable, comfortable, and stylish pieces.',
+                'From fabric to finish, every Karking Fashion product undergoes strict quality checks. We use premium materials and trusted partners to deliver durable, comfortable, and stylish pieces.',
             },
             {
               title: 'Convenience',

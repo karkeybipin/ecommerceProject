@@ -29,7 +29,7 @@ const Footer = () => {
         <div>
           <img src={assets.logo} className="mb-5 w-15" alt="" />
           <p className="w-full md:w-2/3 text-gray-600">
-            Yung flame is the Best online platform to ever exist, which concern the involvement of the online sellers and customers and make the product available through the convenient process and payment easier than ever..
+            Karking Fashion is the Best online platform to ever exist, which concern the involvement of the online sellers and customers and make the product available through the convenient process and payment easier than ever..
           </p>
         </div>
         <div>
@@ -42,17 +42,20 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-            <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
-            <ul className='flex flex-col gap-1 text-gray-600'>
-                <li>+44 7771 671561</li>
-                <li>Prasunthapa44@email.com</li>
-            </ul>
+          <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
+          <ul className='flex flex-col gap-1 text-gray-600'>
+            <li>+977-9869499054</li>
+            <li>karkeybipin@email.com</li>
+            <li>karkeybipin1000@email.com</li>
+            <li>karkeybipin2000@email.com</li>
+            <li>karkeybipin3000@email.com</li>
+          </ul>
         </div>
 
       </div>
       <div>
         <hr className='border-gray-300' />
-        <p className='py-5 text-sm text-center'>Copyright 2025@ Prasun Thapa - yungflame - All Rights Reserved </p>
+        <p className='py-5 text-sm text-center'>Copyright 2025@ Bipin Karkey - Karking - All Rights Reserved </p>
       </div>
 
     </div>

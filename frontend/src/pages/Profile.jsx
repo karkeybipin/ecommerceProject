@@ -5,7 +5,7 @@ import { toast } from 'react-toastify'
 
 const Profile = () => {
   const { token, backendUrl, navigate } = useContext(ShopContext)
-  
+
   // Profile states
   const [user, setUser] = useState({
     name: '',
@@ -13,7 +13,7 @@ const Profile = () => {
   })
   const [isEditing, setIsEditing] = useState(false)
   const [loading, setLoading] = useState(false)
-  
+
   // Password change states
   const [showPasswordChange, setShowPasswordChange] = useState(false)
   const [passwordData, setPasswordData] = useState({
@@ -31,7 +31,7 @@ const Profile = () => {
         {},
         { headers: { token } }
       )
-      
+
       if (response.data.success) {
         setUser({
           name: response.data.user.name,
@@ -50,7 +50,7 @@ const Profile = () => {
   const updateProfile = async (e) => {
     e.preventDefault()
     setLoading(true)
-    
+
     try {
       const response = await axios.post(
         backendUrl + '/api/user/update-profile',
@@ -60,7 +60,7 @@ const Profile = () => {
         },
         { headers: { token } }
       )
-      
+
       if (response.data.success) {
         toast.success(response.data.message)
         setIsEditing(false)
@@ -82,27 +82,27 @@ const Profile = () => {
   // Change password
   const changePassword = async (e) => {
     e.preventDefault()
-    
+
     // Validation
     if (passwordData.newPassword !== passwordData.confirmPassword) {
       toast.error('New password and confirm password do not match')
       return
     }
-    
+
     if (passwordData.newPassword.length < 8) {
       toast.error('Password must be at least 8 characters long')
       return
     }
-    
+
     setPasswordLoading(true)
-    
+
     try {
       const response = await axios.post(
         backendUrl + '/api/user/change-password',
         passwordData,
         { headers: { token } }
       )
-      
+
       if (response.data.success) {
         toast.success(response.data.message)
         setShowPasswordChange(false)
@@ -171,11 +171,11 @@ const Profile = () => {
     <div className='max-w-2xl mx-auto mt-8 p-6'>
       <div className='bg-white shadow-lg rounded-lg p-8'>
         <h1 className='text-2xl font-bold text-gray-800 mb-6'>My Profile</h1>
-        
+
         {/* Profile Information */}
         <div className='mb-8'>
           <h2 className='text-lg font-semibold text-gray-700 mb-4'>Profile Information</h2>
-          
+
           <form onSubmit={updateProfile}>
             <div className='grid grid-cols-1 gap-4'>
               {/* Name Field */}
@@ -189,13 +189,12 @@ const Profile = () => {
                   value={user.name}
                   onChange={handleInputChange}
                   disabled={!isEditing}
-                  className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                    !isEditing ? 'bg-gray-50 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${!isEditing ? 'bg-gray-50 cursor-not-allowed' : ''
+                    }`}
                   required
                 />
               </div>
-              
+
               {/* Email Field */}
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
@@ -207,13 +206,12 @@ const Profile = () => {
                   value={user.email}
                   onChange={handleInputChange}
                   disabled={!isEditing}
-                  className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                    !isEditing ? 'bg-gray-50 cursor-not-allowed' : ''
-                  }`}
+                  className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${!isEditing ? 'bg-gray-50 cursor-not-allowed' : ''
+                    }`}
                   required
                 />
               </div>
-              
+
               {/* Password Field (Disabled) */}
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
@@ -230,7 +228,7 @@ const Profile = () => {
                 </p>
               </div>
             </div>
-            
+
             {/* Action Buttons */}
             <div className='flex flex-wrap gap-3 mt-6'>
               {!isEditing ? (
@@ -271,12 +269,12 @@ const Profile = () => {
             </div>
           </form>
         </div>
-        
+
         {/* Change Password Section */}
         {showPasswordChange && (
           <div className='border-t pt-8'>
             <h2 className='text-lg font-semibold text-gray-700 mb-4'>Change Password</h2>
-            
+
             <form onSubmit={changePassword}>
               <div className='grid grid-cols-1 gap-4'>
                 {/* Current Password */}
@@ -294,7 +292,7 @@ const Profile = () => {
                     required
                   />
                 </div>
-                
+
                 {/* New Password */}
                 <div>
                   <label className='block text-sm font-medium text-gray-700 mb-2'>
@@ -314,7 +312,7 @@ const Profile = () => {
                     Password must be at least 8 characters long
                   </p>
                 </div>
-                
+
                 {/* Confirm New Password */}
                 <div>
                   <label className='block text-sm font-medium text-gray-700 mb-2'>
@@ -332,7 +330,7 @@ const Profile = () => {
                   />
                 </div>
               </div>
-              
+
               {/* Password Change Buttons */}
               <div className='flex flex-wrap gap-3 mt-6'>
                 <button
