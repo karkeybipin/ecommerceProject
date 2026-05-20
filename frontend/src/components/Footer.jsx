@@ -56,7 +56,7 @@ const Footer = () => {
       </div>
       <div>
         <hr className='border-gray-300'/>
-        <p className='py-5 text-sm text-center'>Copyright 2025@ Bipin Karkey - Karking - All Rights Reserved </p>
+        <p className='py-5 text-sm text-center'>Copyright 2025@ Bipin Karkey - KarkingFashion - All Rights Reserved </p>
       </div>
 
     </div>
