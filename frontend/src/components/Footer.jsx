@@ -49,12 +49,13 @@ const Footer = () => {
             <li>karkeybipin1000@email.com</li>
             <li>karkeybipin2000@email.com</li>
             <li>karkeybipin3000@email.com</li>
+            <li>www.karkingFashion.com.np</li>
           </ul>
         </div>
 
       </div>
       <div>
-        <hr className='border-gray-300' />
+        <hr className='border-gray-300'/>
         <p className='py-5 text-sm text-center'>Copyright 2025@ Bipin Karkey - Karking - All Rights Reserved </p>
       </div>
 
